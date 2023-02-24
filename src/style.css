@@ -1,99 +1,48 @@
 body {
-background-color: white;
-padding-top: 90px; /* CAMBIÉ DE 20 A 90 PARA BAJAR EL CONTENEDOR Y EN HTML METÍ EL LOGO EN EL CONTENEDOR DE TOP-STRIPE PARA QUE SE VIERA */
-padding-bottom: 20px;
-}
-.flex-container{
-    border: 1px solid black;
-    background: white;
-    padding: 100px;
-    display: flex;
-    position: absolute;
-    z-index: 2;
-    left: 0;
-
-   /* flex-flow: row;
-   width: 80%;
-   
-   */
-   justify-content: space-around;
-   flex-wrap: wrap;
-    
-    margin: 0 auto;
+  margin: 0;
 }
 
+.flex-container {
+  border: 1px solid black;
+  background: white;
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  margin: 0 auto;
+}
 
 .top-stripe {
-  height: 260px; /* CAMBIÉ DE 180 A 260 PARA QUE COINCIDIERA CON EL BORDE NEGRO */
+  height: 260px;
   width: 100%;
-  background-color: #2395D3;
+  background-color: #2395d3;
   position: absolute;
   top: 0;
   z-index: 1;
 }
 
-
-
-.flex-item{
-    width: 150px;
-    height: 210px;
-   /* margin: 10px;
-    background-size: cover;
-    background-position: center;*/
-    padding: 20px;
+.flex-item {
+  width: 150px;
+  height: 210px;
+  padding: 20px;
 }
-.flex-item img{
-    width:150px;
-    height: 210px;
-    flex-grow: 4;
-
+.flex-item img {
+  width: 150px;
+  height: 210px;
+  flex-grow: 4;
 }
-
-/* .flex-banner {
-/* 
-        background: url('https://i.imgur.com/J9aNcE6.jpg') top left/cover no-repeat; */
-        /* height: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-} */
- 
-
 .header {
   display: flex;
-  align-items: center;
-  position: static;
+  width: 100%;
+  height: 200px;
+  background-color: #2395d3;
 }
 
-.contenedorBanner {
-    position:sticky; 
-    width: 100%;
-    height: 100px;
-    z-index: 1;
+.ghibliLogo {
+  width: 280px;
+  padding-top: 30px;
+  padding-left: 20px;
 }
-  
-  .banner3 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    align-items: center;
-    
-  }
-
-  
-  
-  .logo img {
-    position: absolute;
-    top: 30px; /* PUSE 30 ARRIBA, A LA IZQUIERDA Y ABAJO PARA EQUILIBRAR LA ALINEACIÓN DEL LOGO Y AJUSTÉ LA PROPORCIÓN AL TAMAÑO DEL BANNER */
-    left: 30px;
-    bottom: 30px;
-    width: 266px;
-    height: 130px;
-  }
- 
-
-
-
-
