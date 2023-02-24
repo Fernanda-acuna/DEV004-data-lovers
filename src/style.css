@@ -1,12 +1,12 @@
 body {
 background-color: white;
-padding-top: 20px;
+padding-top: 90px; /* CAMBIÉ DE 20 A 90 PARA BAJAR EL CONTENEDOR Y EN HTML METÍ EL LOGO EN EL CONTENEDOR DE TOP-STRIPE PARA QUE SE VIERA */
 padding-bottom: 20px;
 }
 .flex-container{
     border: 1px solid black;
     background: white;
-    padding: 20px;
+    padding: 100px;
     display: flex;
     position: absolute;
     z-index: 2;
@@ -21,6 +21,18 @@ padding-bottom: 20px;
     
     margin: 0 auto;
 }
+
+
+.top-stripe {
+  height: 260px; /* CAMBIÉ DE 180 A 260 PARA QUE COINCIDIERA CON EL BORDE NEGRO */
+  width: 100%;
+  background-color: #2395D3;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+
 
 .flex-item{
     width: 150px;
@@ -68,18 +80,20 @@ padding-bottom: 20px;
     height: 50px;
     align-items: center;
     
-    /* background-color: #FF0000; */
   }
 
   
   
   .logo img {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 184px;
-    height: 94px;
+    top: 30px; /* PUSE 30 ARRIBA, A LA IZQUIERDA Y ABAJO PARA EQUILIBRAR LA ALINEACIÓN DEL LOGO Y AJUSTÉ LA PROPORCIÓN AL TAMAÑO DEL BANNER */
+    left: 30px;
+    bottom: 30px;
+    width: 266px;
+    height: 130px;
   }
-  /* .logoGhibli{
-    width: 30px;
-  } */
+ 
+
+
+
+
