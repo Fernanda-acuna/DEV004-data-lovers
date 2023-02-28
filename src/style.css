@@ -11,6 +11,7 @@ body {
 
 .grid-item {
   text-align: center;
+
 }
 
 .grid-item img {
@@ -21,11 +22,12 @@ body {
 }
 
 .letraRoja{
-  color: red;
+  color: #2395d3;
+  font: bolder;
 }
 
-/* HOVER */
-.test {
+/* antes llamado cortinita */
+.img{
   position: absolute;
   text-align: center;
   padding-left: 1em;
@@ -40,9 +42,9 @@ body {
   -webkit-transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
-}
+} 
 
-.section:hover .flex-title{
+.img:hover .cortinita{
   top: 50%;
   left: 50%;
   opacity: 1;
@@ -139,3 +141,8 @@ como hacer el hover de la imagen
   height: 210px;
   flex-grow: 4;
 } */
+
+
+.main-title {
+  text-align: center;
+}
