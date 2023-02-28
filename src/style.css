@@ -20,8 +20,12 @@ body {
   
 }
 
+.letraRoja{
+  color: red;
+}
+
 /* HOVER */
-. {
+.test {
   position: absolute;
   text-align: center;
   padding-left: 1em;

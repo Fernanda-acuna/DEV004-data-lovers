@@ -14,7 +14,7 @@ for (let i = 0; i < tituloPelicula.length; i++) {
   const posterPelicula = peliculas[i].poster;
 //  const nombreDirector= directorPelicula[i].director;
 //  console.log(nombreDirector)
-  const html= `<section class="grid-item"><p>${nombreDePeli}</p> <img src="${posterPelicula}" /></section>`;
+  const html= `<section class="grid-item"><p class="letraRoja">${nombreDePeli}</p> <img src="${posterPelicula}" /></section>`;
 //const html = "<p>"+nombreDePeli+"</p><img src=""+postPelicula+"/>";
 console.log(html); 
 // debugger
