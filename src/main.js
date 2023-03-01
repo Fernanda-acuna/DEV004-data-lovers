@@ -1,5 +1,6 @@
 import { example } from './data.js';
 
+
 import data from './data/ghibli/ghibli.js';
 
 const peliculas = data.films;
@@ -28,6 +29,41 @@ contenedorNombrePelicula.innerHTML= contenedorNombrePelicula.innerHTML + html;
 
 
 
+
+
+
+/*
+import data from './data/ghibli/ghibli.js';
+
+const peliculas = data.films;
+const contenedorNombrePelicula = document.querySelector("#container-title");
+
+for (let i = 0; i < peliculas.length; i++) {
+  const { title, poster } = peliculas[i];
+  const html = `
+    <section class="grid-item">
+      <p class="letraRoja">${title}</p>
+      <img src="${poster}" class="cortinita"/>
+    </section>
+  `;
+  contenedorNombrePelicula.innerHTML += html;
+}
+*/
+
+// EVENTOS PRUEBA
+
+
+const gridItems = document.querySelectorAll('.grid-item');
+
+gridItems.forEach(item => {
+  const img = item.querySelector('img');
+  item.addEventListener('mouseover', () => {
+    img.classList.add('img-overlay');
+  });
+  item.addEventListener('mouseout', () => {
+    img.classList.remove('img-overlay');
+  });
+});
 
 
 
