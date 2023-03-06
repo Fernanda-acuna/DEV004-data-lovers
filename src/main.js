@@ -17,13 +17,11 @@ for (let i = 0; i < peliculas.length; i++) {
   <p class="titulosPelis">${nombreDePeli}</p> 
   <img src="${posterPelicula}" class="cortinita"/>
   <div class="overlay">
-  <div class="directorPeli"> 
-  <p class="directores"> ${nombreDirector}</p>
+  <div class="directorPeli">
+    <p class="directores">${nombreDirector}</p>
+    <p class="anio">${yearMovie}</p>
   </div>
-  <div class="fechaLanzamiento">
-  <p class="anio"> ${yearMovie}</p>
-  </div>
-  </div>
+</div>
   </section>`;
    
   // debugger
