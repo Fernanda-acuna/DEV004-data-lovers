@@ -4,7 +4,6 @@ import data from './data/ghibli/ghibli.js';
 const peliculas = data.films;
 
 const contenedorPeliculas = document.querySelector("#contenedor-peliculas");
-console.log(contenedorPeliculas);
 
 
 for (let i = 0; i < peliculas.length; i++) {
