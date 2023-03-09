@@ -111,3 +111,11 @@ footer {
   font-size: 1.2em;
   position: absolute;
 }
+@media (max-width: 575.98px) {
+  .grid-item img {
+    border: 25px dashed red;
+    height: 300px;
+    width: 300px;
+  }
+  
+ }
