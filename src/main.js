@@ -1,24 +1,45 @@
 import { example } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
+
 const peliculas = data.films;
+
+//tratando de obtener la data
+// const fechaLanzamiento = data.films.release_date
+// console.log(fechaLanzamiento)
 
 const contenedorPeliculas = document.querySelector("#contenedor-peliculas");
 
+const drop = document.querySelector("#drop");
 
+//html
+const dropdownHtml= `<div class="dropdown">
+<div class="select">
+<span class="selected">Ordenar</span>
+<div class="caret"></div>
+</div>
+<ul class="menu">
+<li>Ascendente</li>
+<li>Descendente</li>
+  </ul>
+</div>`
+drop.innerHTML += dropdownHtml;
+
+ console.log(dropdownHtml)
 for (let i = 0; i < peliculas.length; i++) {
   const nombreDePeli = peliculas[i].title;
   const posterPelicula = peliculas[i].poster;
   const nombreDirector = peliculas[i].director;
   const yearMovie = peliculas[i].release_date;
 
+  
   const html = `<section class="grid-item">
   <p class="titulosPelis">${nombreDePeli}</p> 
-  <img src="${posterPelicula}" class="cortinita"/>
+  <img src="${posterPelicula}"class="cortinita"/>
   <div class="overlay">
   <div class="directorPeli">
-    <p class="directores">${nombreDirector}</p>
-    <p class="anio">${yearMovie}</p>
+    <p class="directores">Director:${nombreDirector}</p>
+    <p class="anio">Año:${yearMovie}</p>
   </div>
 </div>
   </section>`;
@@ -77,3 +98,17 @@ dropdowns.forEach(dropdown => {
     })
   })
 })
+
+// // funcion que ordene ascendente
+// const fecha.lanzamiento = release_date.data
+// function compareNumbers(a, b) {
+//   return a - b;
+// }
+
+//funcion que me ayude a obtener la fecha de lanzamiento 
+const sorter = (a,b) => {
+   if(a.release_date !== b.release_date){
+      return a.release_date - b.release_date;
+   };
+};
+//console.log(fechaLanzamiento.sort(sorter))

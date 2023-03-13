@@ -16,10 +16,17 @@ body {
   max-width: 1200px;
 }
 
+#drop{
+  width: 100px;
+  height: 100px;
+  display: flex;
+ 
+}
+
 .grid-item img {
   width: 150px;
   height: 210px;
-  flex-grow: 4;
+  flex-grow: 5;
   border-bottom-right-radius: 12px;
   border: 15px solid  #2395d3;
 }
@@ -85,7 +92,7 @@ footer {
 
 .anio {
   position: absolute;
-  top: 60%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -118,21 +125,24 @@ footer {
   min-width: 15em;
   position: relative;
   margin: 2em;
-}
-.dropdown{
+  box-sizing: border-box;
+  display: flex;
+ }
+/* .dropdown{
   box-sizing: border-box;
   display: inline-flex;
-}
+  habîa 2  .dropdown,  por lo que comenté el 2do y lo agregué al 1ero
+} */
 .select{
   background: #2395d3;
   color:black;
   display: flex; 
-  justify-content: space-between;
+  justify-content: space-between; 
   align-items: center;
-  border:2px white;
+  /* border: green; */
   border-bottom-right-radius: 0.5em;
   padding: 1em;
-  cursor:pointer;
+  cursor: pointer;
   transition: 0.3s;
 
 }
@@ -144,6 +154,7 @@ footer {
   background: #56afde;
 
 }
+/* es la flechita */
 .caret{
   width: 0;
   height: 0;
@@ -158,11 +169,11 @@ footer {
 .menu{
   list-style: none;
   padding: 0.2em 0.5em;
-  background: #323741;
-  border: 1px #363a43 solid;
+  background: #2395d3; 
+  border: 1px #26489a solid;
   box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
-  border-radius: 0.5em;
-  color: #9fa5b5;
+  border-bottom-right-radius: 0.5em;
+  color: black;
   position: absolute;
   top: 3em;
   left: 50%;
@@ -177,18 +188,19 @@ footer {
 .menu li{
   padding: 0.7em 0.5em;
   margin: 0.3em 0;
-  border-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
   cursor: pointer;
 }
 .menu li:hover{
-  background: #2a2d35;
+  background: #56afde;
 }
 .active{
-  background: #23242a;
+  background: #26489a;
 
 }
+
 /* open styles (en js) */
 .menu-open{
-  display:block;
+  display: block;
   opacity: 1;
 }
