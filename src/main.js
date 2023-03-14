@@ -170,49 +170,67 @@ directorOptions.forEach((option) => {
 
 
 
+// Función ordenar por año, orden Ascendente >
 
-
-
-
-
-
-
-
-
-
-// Función ordenar por año (descendente)
-
-function peliculasPorAñoDesc(peliculas) {
+function peliculasAscendente(peliculas) {
+  
   return peliculas.sort((a, b) => {
-    // Convierte las fechas en objetos Date para poder compararlos
-    const fechaA = new Date(a.release_date);
-    const fechaB = new Date(b.release_date);
 
-    // Compara las fechas para determinar si la fecha de la película "a" es mayor que la fecha de la película "b"
-    if (fechaA > fechaB) {
-      // Si la fecha de la película "a" es mayor que la fecha de la película "b", devuelve -1 para que "a" se ordene antes que "b"
-      return -1;
-    }
+    const fechaA = new Date(a.release_date)
+    const fechaB = new Date(b.release_date)
 
-    // Compara las fechas para determinar si la fecha de la película "a" es menor que la fecha de la película "b"
     if (fechaA < fechaB) {
-      // Si la fecha de la película "a" es menor que la fecha de la película "b", devuelve 1 para que "a" se ordene después que "b"
+      return -1;
+    } else if (fechaA > fechaB) {
       return 1;
+    } else {
+      return 0; 
     }
-
-    // Si las fechas son iguales, devuelve 0 para mantener el orden actual
-    return 0;
   });
 }
 
 
-// Obtener el elemento de la lista del botón "Año"
-const botonAño = document.querySelector("li:nth-child(1)");
+// Botón año ascendente
+const fechaOrdenarA = document.querySelector("li:nth-child(1)");
 
-// Agregar un evento "click" al botón "Año"
-botonAño.addEventListener("click", () => {
-  // Llamar a la función "peliculasPorAñoDesc" para ordenar las películas por año de mayor a menor
-  const peliculasAño = peliculasPorAñoDesc(peliculas);
-  // Renderizar las películas ordenadas por año
+fechaOrdenarA.addEventListener("click", () => {
+  const peliculasAño = peliculasAscendente(peliculas);
   renderPeliculas(peliculasAño);
+
 });
+
+
+
+
+// Función ordenar por año, orden descendente >
+
+function peliculasDescendente(peliculas) {
+  
+  return peliculas.sort((a, b) => {
+
+    const fechaA = new Date(a.release_date)
+    const fechaB = new Date(b.release_date)
+
+    if (fechaA < fechaB) {
+      return 1;
+    } if (fechaA > fechaB) {
+      return -1;
+    } 
+      return 0; 
+  });
+}
+
+
+// Botón año descendente
+const fechaOrdenarD = document.querySelector("li:nth-child(2)");
+
+fechaOrdenarD.addEventListener("click", () => {
+  const peliculasAñoD = peliculasDescendente(peliculas);
+  renderPeliculas(peliculasAñoD);
+
+});
+
+
+
+
+
