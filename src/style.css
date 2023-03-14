@@ -112,6 +112,7 @@ footer {
   font-size: 1.2em;
   position: absolute;
 }
+/*
 @media (max-width: 575.98px) {
   .grid-item img {
     border: 25px dashed red;
@@ -119,13 +120,16 @@ footer {
     width: 300px;
   }
   
- }
+  
+ } */
 
 /*boton años*/
 .dropdown{
   min-width: 15em;
   position: relative;
   margin: 2em;
+  z-index: 99999;
+
 }
 .dropdown{
   box-sizing: border-box;
@@ -166,11 +170,11 @@ footer {
 .menu{
   list-style: none;
   padding: 0.2em 0.5em;
-  background: #323741;
-  border: 1px #363a43 solid;
+  background: #2395d3;
+  border: 1px #26489a solid;
   box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
-  border-radius: 0.5em;
-  color: #9fa5b5;
+  border-bottom-right-radius: 0.5em;
+  color: black;
   position: absolute;
   top: 3em;
   left: 50%;
@@ -185,14 +189,14 @@ footer {
 .menu li{
   padding: 0.7em 0.5em;
   margin: 0.3em 0;
-  border-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
   cursor: pointer;
 }
 .menu li:hover{
-  background: #2a2d35;
+  background: #56afde;
 }
 .active{
-  background: #23242a;
+  background: #26489a;
 
 }
 /* open styles (en js) */
@@ -200,3 +204,9 @@ footer {
   display:block;
   opacity: 1;
 }
+
+
+
+
+
+
