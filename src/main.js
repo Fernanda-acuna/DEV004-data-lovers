@@ -3,6 +3,10 @@ import data from "./data/ghibli/ghibli.js";
 
 const peliculas = data.films;
 
+//tratando de obtener la data
+// const fechaLanzamiento = data.films.release_date
+// console.log(fechaLanzamiento)
+
 const contenedorPeliculas = document.querySelector("#contenedor-peliculas");
 
 function renderPeliculas(peliculas) {
