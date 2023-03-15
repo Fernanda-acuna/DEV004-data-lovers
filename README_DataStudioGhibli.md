@@ -5,7 +5,7 @@ el problema (o problemas) que tiene tu usuario.
 Poyecto Data Lovers
 por Debra Figueroa y Fernanda Acuña
 
-Nuestro proyecto busca mostrar de manera clara y ordenada las diferentes producciones creadas por estudio Ghibli, sus años de publicación y sus distintos directores. Para poder entregar la información que necesitan y buscan nuestros usuarios, dividimos sus requerimientos en 4 historias de usuarios.
+Nuestro proyecto busca mostrar de manera clara y ordenada las diferentes producciones creadas por estudio Ghibli, sus años de publicación y sus distintos directores y productores. Para poder organizar la información que necesitan y buscan , dividimos sus requerimientos en 5 historias de usuarios.
 
 ## Historias de usuario:
 
@@ -29,7 +29,7 @@ _Yo, como aficionado a las producciones de Studio Ghibli, quiero saber cuáles s
 
 _Yo, como aficionado a las producciones de Studio Ghibli, quiero saber cuál fue la última película que estrenó para estar al tanto de sus novedades._
 
-<b>Criterios de aceptación (cosas que va a ver mi usuario):</b>
+<b>Criterios de aceptación:</b>
 
 2. Que al presionar en el botón “ordenar” se muestre el menú desplegable con las opciones ascendente y descendente.
 3. Que al presionar el botón “orden ascendente” se ordenen las películas de la más antigua a la más nueva.
@@ -46,10 +46,28 @@ _Yo, como aficionado a las producciones de Studio Ghibli, quiero saber cuál fue
 6. Dos usuarios nos dieron feedback.
 7. Que esté desplegado en GitHub.
 
-## HU3.-Definición de la HU3:
+* HU3.-Definición de la HU3:
 
-_Yo, como aficionado a las producciones de Miyazaki, quiero saber qué películas de Studio Ghibli dirigió para comprender su visión._
+<b>Definición de la HU3:</b>
 
+_Yo, como aficionado a las producciones de Studio Ghibli, quiero ver las películas en orden alfabético (a-z y z-a) para encontrar de manera más rápida la que estoy buscando._
+
+<b>Criterios de aceptación:</b>
+
+1. Botón “Ordenar”.
+2. Que al presionar en el botón “ordenar” se muestre el menú desplegable con las opciones “Ascendente”, “Descendente”, “A-Z” y “Z-A”.
+3. Que al presionar el botón “A-Z” se ordenen las películas en orden alfabético.
+4. Que al presionar el botón “Z-A” se ordenen las películas en orden alfabético inverso.
+4. Diseño responsivo.
+Definición de terminado (equipo de desarrollo):
+5. Que el diseño sea igual a mi prototipo de alta.
+
+1. Que el botón funcione de manera correcta.
+2. Que el menú se despliegue de manera correcta.
+3. Que las películas se reordenen correctamente, según la instrucción.
+4. Que nuestros criterios de aceptación pasen los tests.
+5. Dos usuarios nos dieron feedback.
+6. Que esté desplegado en GitHub.
 
 * HU4.-
 
@@ -57,12 +75,22 @@ _Yo, como aficionado a las producciones de Miyazaki, quiero saber qué película
 
 
 Realizamos 2 prototipos de nuestra web, un prototipo de baja y uno de alta. 
-protopo de baja 
- ![Prototipo de baja](url=https://postimg.cc/9rvNNBhr)
-[url=https://postimg.cc/9rvNNBhr][img]https://i.postimg.cc/9rvNNBhr/prototipo-Baja.jpg[/img][/url]
 
-prototipo de alta
-[url=https://postimg.cc/RN3DRD2k][img]https://i.postimg.cc/RN3DRD2k/Protoipo-de-alta.jpg[/img][/url]
+* Nuestro prototipo de de baja 
+
+![Prototipo de baja](https://i.postimg.cc/8z5QcyXB/prototipo-Baja.jpg)
+
+_Este prototipo fue realizado en paint_.
+
+
+* Nuestro prototipo de alta
+
+![prototipo de alta](https://i.postimg.cc/3J9QKM1x/Protoipo-de-alta.jpg)
+
+_Este protipo fue realizado en figma_.
+
+
+
 
 * [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
 * [ ] Incluye historias de usuario en `README.md`.
