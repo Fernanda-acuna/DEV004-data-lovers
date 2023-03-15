@@ -119,12 +119,24 @@ footer {
   font-size: 1.2em;
   position: absolute;
 }
+/*
+@media (max-width: 575.98px) {
+  .grid-item img {
+    border: 25px dashed red;
+    height: 300px;
+    width: 300px;
+  }
+  
+  
+ } */
 
 /*boton años*/
 .dropdown{
   min-width: 15em;
   position: relative;
   margin: 2em;
+  z-index: 99999;
+
   box-sizing: border-box;
   display: flex;
  }
@@ -169,7 +181,7 @@ footer {
 .menu{
   list-style: none;
   padding: 0.2em 0.5em;
-  background: #2395d3; 
+  background: #2395d3;
   border: 1px #26489a solid;
   box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
   border-bottom-right-radius: 0.5em;
@@ -204,3 +216,9 @@ footer {
   display: block;
   opacity: 1;
 }
+
+
+
+
+
+

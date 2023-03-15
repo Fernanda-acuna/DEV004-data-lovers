@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1" />
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -16,8 +17,8 @@
       </div>
     </div>
 
- <!-- esta comentado porque lo pase al js -->
-    <!-- <section class="dropdown">
+    <!-- Ordenar -->
+    <section class="dropdown">
       <div class="select">
         <span class="selected">Ordenar&nbsp;</span>
         <div class="caret"></div>
@@ -25,9 +26,29 @@
       <ul class="menu">
         <li>Ascendente</li>
         <li>Descendente</li>
+        <li id="ordenarAZ">A-Z</li>
+        <li id="ordenarZA">Z-A</li>
       </ul>
+    </section>
 
-    </section> -->
+    <!-- Filtrar por Director -->
+    <section class="dropdown" id="directorDropdown">
+      <div class="select">
+        <span class="selected">Buscar por director&nbsp;</span>
+        <div class="caret"></div>
+      </div>
+      <ul class="menu">
+        <li>Hayao Miyazaki</li>
+        <li>Isao Takahata</li>
+        <li>Yoshifumi Kondō</li>
+        <li>Hiroyuki Morita</li>
+        <li>Gorō Miyazaki</li>
+        <li>Hiromasa Yonebayashi</li>
+       </ul>
+    </section>
+
+
+
     <!-- <h1>Producciones</h1> -->
     
 <!-- el boton de ordenar -->
