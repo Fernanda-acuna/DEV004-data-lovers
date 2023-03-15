@@ -75,18 +75,19 @@ Definición de terminado (equipo de desarrollo):
 
 
 Realizamos 2 prototipos de nuestra web, un prototipo de baja y uno de alta. 
-protopo de baja 
+
+* Nuestro prototipo de de baja 
 
 ![Prototipo de baja](https://i.postimg.cc/8z5QcyXB/prototipo-Baja.jpg)
 
-Este prototipo fue realizado en _paint_.
+_Este prototipo fue realizado en paint_.
 
 
-prototipo de alta
+* Nuestro prototipo de alta
 
 ![prototipo de alta](https://i.postimg.cc/3J9QKM1x/Protoipo-de-alta.jpg)
 
-Este protipo fue realizado en _figma_.
+_Este protipo fue realizado en figma_.
 
 
 
