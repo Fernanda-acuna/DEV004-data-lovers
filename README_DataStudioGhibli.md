@@ -59,9 +59,11 @@ _Yo, como aficionado a las producciones de Miyazaki, quiero saber qué película
 Realizamos 2 prototipos de nuestra web, un prototipo de baja y uno de alta. 
 protopo de baja 
  ![Prototipo de baja](url=https://postimg.cc/9rvNNBhr)
+ ![Prototipo de baja](https://i.postimg.cc/3J9QKM1x/Protoipo-de-alta.jpg)
 [url=https://postimg.cc/9rvNNBhr][img]https://i.postimg.cc/9rvNNBhr/prototipo-Baja.jpg[/img][/url]
 
 prototipo de alta
+
 [url=https://postimg.cc/RN3DRD2k][img]https://i.postimg.cc/RN3DRD2k/Protoipo-de-alta.jpg[/img][/url]
 
 * [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
