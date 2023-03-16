@@ -154,11 +154,7 @@ directorOptions.forEach((option) => {
   option.addEventListener("click", () => {
     // Obtener el nombre del director seleccionado
     const selectedDirector = option.innerText;
-
-    // Filtrar las películas por director
-    const peliculasFiltradas = peliculas.filter((pelicula) => {
-      return pelicula.director === selectedDirector;
-    });
+    const peliculasFiltradas = botonesPelis.filtrarDirectores(peliculas, selectedDirector)
 
     // Renderizar las películas filtradas
     renderPeliculas(peliculasFiltradas);

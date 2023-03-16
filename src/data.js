@@ -90,14 +90,12 @@ function peliculasDescendente(peliculas) {
 
 // Función Directores
 
-function filtrarDirectores(peliculas) {
-  const directores = peliculas.reduce((obj, pelicula) => {
-    obj[pelicula.director] = true;
-    return obj;
-  }, {});
-  return Object.keys(directores);
+// Filtrar las películas por director
+function filtrarDirectores(peliculas, selectedDirector){
+  return peliculas.filter((pelicula) => {
+    return pelicula.director === selectedDirector;
+  });
 }
-
 
 
 export default botonesPelis;
