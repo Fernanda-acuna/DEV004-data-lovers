@@ -1,4 +1,4 @@
-import { example } from "./data.js";
+import {filtrarProductor} from "./data.js";
 import data from "./data/ghibli/ghibli.js";
 
 const peliculas = data.films;
@@ -12,7 +12,7 @@ const contenedorPeliculas = document.querySelector("#contenedor-peliculas");
 function renderPeliculas(peliculas) {
   contenedorPeliculas.innerHTML = peliculas
     .map((pelicula) => {
-      const { title, poster, director, release_date } = pelicula;
+      const { title, poster, director, release_date, } = pelicula;
       return `<section class="grid-item">
         <p class="titulosPelis">${title}</p>
         <img src="${poster}" class="cortinita"/>
@@ -27,7 +27,7 @@ function renderPeliculas(peliculas) {
     .join("");
 }
 
-console.log(contenedorPeliculas.innerHTML);
+// console.log(contenedorPeliculas.innerHTML);
 
 renderPeliculas(peliculas);
 
@@ -55,13 +55,16 @@ dropdowns.forEach((dropdown) => {
   const menu = dropdown.querySelector(".menu");
   const options = dropdown.querySelectorAll(".menu li");
   const selected = dropdown.querySelector(".selected");
-
-  //agregar el click event al elemento seleccionado
-  select.addEventListener("click", () => {
-    select.classList.toggle("select-clicked");
-    caret.classList.toggle("caret-rotate");
-    menu.classList.toggle("menu-open");
-  });
+// console.log(select);
+if(select != null){
+//agregar el click event al elemento seleccionado
+select.addEventListener("click", () => {
+  select.classList.toggle("select-clicked");
+  caret.classList.toggle("caret-rotate");
+  menu.classList.toggle("menu-open");
+});
+}
+  
   //loop a traves de las posiciones
   options.forEach((option) => {
     option.addEventListener("click", () => {
@@ -174,6 +177,7 @@ directorOptions.forEach((option) => {
 
 
 
+
 // Función ordenar por año, orden Ascendente >
 
 function peliculasAscendente(peliculas) {
@@ -234,7 +238,13 @@ fechaOrdenarD.addEventListener("click", () => {
 
 });
 
+const productores = document.querySelector("#productores")
+//el select funciona al change, no al click
+productores.addEventListener("change",() =>{
+  
+  const productor = productores.value
+  const productorFiltrado = filtrarProductor(peliculas,productor);
+  renderPeliculas(productorFiltrado)
 
-
-
+})
 

@@ -23,6 +23,8 @@ body {
  
 }
 
+
+
 .grid-item img {
   width: 150px;
   height: 210px;
@@ -119,16 +121,6 @@ footer {
   font-size: 1.2em;
   position: absolute;
 }
-/*
-@media (max-width: 575.98px) {
-  .grid-item img {
-    border: 25px dashed red;
-    height: 300px;
-    width: 300px;
-  }
-  
-  
- } */
 
 /*boton años*/
 .dropdown{
@@ -140,11 +132,7 @@ footer {
   box-sizing: border-box;
   display: flex;
  }
-/* .dropdown{
-  box-sizing: border-box;
-  display: inline-flex;
-  habîa 2  .dropdown,  por lo que comenté el 2do y lo agregué al 1ero
-} */
+
 .select{
   background: #2395d3;
   color:black;
