@@ -56,12 +56,12 @@ dropdowns.forEach((dropdown) => {
   const selected = dropdown.querySelector(".selected");
   // console.log(select);
   // if (select !== null) {
-    //agregar el click event al elemento seleccionado
-    select.addEventListener("click", () => {
-      select.classList.toggle("select-clicked");
-      caret.classList.toggle("caret-rotate");
-      menu.classList.toggle("menu-open");
-    });
+  //agregar el click event al elemento seleccionado
+  select.addEventListener("click", () => {
+    select.classList.toggle("select-clicked");
+    caret.classList.toggle("caret-rotate");
+    menu.classList.toggle("menu-open");
+  });
   //}
 
   //loop a traves de las posiciones
@@ -127,7 +127,6 @@ fechaOrdenarD.addEventListener("click", () => {
 
 });
 
-
 // Botón directores
 // Obtener el elemento del botón desplegable por id
 const directorDropdown = document.querySelector("#directorDropdown");
@@ -146,7 +145,7 @@ directorOptions.forEach((option) => {
 });
 
 //boton PRODUCTORES
-const producerDropdown  = document.querySelector("#productoresDropdown")
+const producerDropdown = document.querySelector("#productoresDropdown")
 const productorOptions = producerDropdown.querySelectorAll(".menu li");
 productorOptions.forEach((option) => {
   option.addEventListener("click", () => {
@@ -156,9 +155,11 @@ productorOptions.forEach((option) => {
   });
 
 });
-  // function toggleDropdown() {
-  //   var dropdown = document.getElementById("productoresDropdown");
-  //   dropdown.classList.toggle("dropdown3");
-  // }
+// function toggleDropdown() {
+//   var dropdown = document.getElementById("productoresDropdown");
+//   dropdown.classList.toggle("dropdown3");
+// }
+
+
 
 export default renderPeliculas;

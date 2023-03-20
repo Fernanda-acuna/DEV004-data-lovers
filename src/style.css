@@ -21,7 +21,7 @@ body {
   height: 210px;
   flex-grow: 4;
   border-bottom-right-radius: 12px;
-  border: 15px solid  #2395d3;
+  border: 15px solid #2395d3;
 }
 
 .titulosPelis {
@@ -122,9 +122,9 @@ footer {
     width: 300px;
   }
   */
-  
 
-.dropdown{
+
+.dropdown {
   min-width: 15em;
   position: relative;
   margin: 2em;
@@ -134,28 +134,31 @@ footer {
 
 }
 
-.select{
+.select {
   background: #2395d3;
-  color:black;
-  display: flex; 
+  color: black;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  border:2px white;
+  border: 2px white;
   border-bottom-right-radius: 0.5em;
   padding: 1em;
-  cursor:pointer;
+  cursor: pointer;
   transition: 0.3s;
 
 }
-.select-clicked{
-  border:2px #26489a solid;
+
+.select-clicked {
+  border: 2px #26489a solid;
   box-shadow: 0 0 0.89em #26489a;
 }
-.select:hover{
+
+.select:hover {
   background: #56afde;
 
 }
-.caret{
+
+.caret {
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -163,10 +166,12 @@ footer {
   border-top: 6px solid #fff;
   transition: 0.3s;
 }
-.caret-rotate{
+
+.caret-rotate {
   transform: rotate(180deg);
 }
-.menu{
+
+.menu {
   list-style: none;
   padding: 0.2em 0.5em;
   background: #2395d3;
@@ -186,21 +191,24 @@ footer {
 }
 
 
-.menu li{
+.menu li {
   padding: 0.7em 0.5em;
   margin: 0.3em 0;
   border-bottom-right-radius: 0.5em;
   cursor: pointer;
 }
-.menu li:hover{
+
+.menu li:hover {
   background: #56afde;
 }
-.active{
+
+.active {
   background: #26489a;
 
 }
+
 /* open styles (en js) */
-.menu-open{
-  display:block;
+.menu-open {
+  display: block;
   opacity: 1;
 }
