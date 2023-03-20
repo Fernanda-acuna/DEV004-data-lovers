@@ -16,19 +16,10 @@ body {
   max-width: 1200px;
 }
 
-#drop{
-  width: 100px;
-  height: 100px;
-  display: flex;
- 
-}
-
-
-
 .grid-item img {
   width: 150px;
   height: 210px;
-  flex-grow: 5;
+  flex-grow: 4;
   border-bottom-right-radius: 12px;
   border: 15px solid  #2395d3;
 }
@@ -122,27 +113,37 @@ footer {
   position: absolute;
 }
 
-/*boton años*/
+
+/*
+@media (max-width: 575.98px) {
+  .grid-item img {
+    border: 25px dashed red;
+    height: 300px;
+    width: 300px;
+  }
+  */
+  
+
 .dropdown{
   min-width: 15em;
   position: relative;
   margin: 2em;
   z-index: 99999;
-
   box-sizing: border-box;
-  display: flex;
- }
+  display: inline-flex;
+
+}
 
 .select{
   background: #2395d3;
   color:black;
   display: flex; 
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
-  /* border: green; */
+  border:2px white;
   border-bottom-right-radius: 0.5em;
   padding: 1em;
-  cursor: pointer;
+  cursor:pointer;
   transition: 0.3s;
 
 }
@@ -154,7 +155,6 @@ footer {
   background: #56afde;
 
 }
-/* es la flechita */
 .caret{
   width: 0;
   height: 0;
@@ -183,8 +183,9 @@ footer {
   display: none;
   transition: 0.2s;
   z-index: 1;
-
 }
+
+
 .menu li{
   padding: 0.7em 0.5em;
   margin: 0.3em 0;
@@ -198,15 +199,8 @@ footer {
   background: #26489a;
 
 }
-
 /* open styles (en js) */
 .menu-open{
-  display: block;
+  display:block;
   opacity: 1;
 }
-
-
-
-
-
-
