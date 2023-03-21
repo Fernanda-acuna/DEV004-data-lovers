@@ -1,4 +1,4 @@
-import  peliculasAscendente  from '../src/data.js';
+import  {peliculasAscendente}  from '../src/data.js';
 
 // describe('example', () => {
 //   it('is a function', () => {
@@ -21,14 +21,18 @@ describe('Ordenar pelîculas de manera Ascendente', () => {
     ]
 
     const ordenarDeAntiguaANueva = peliculasAscendente(datos)
-    expect(typeof ordenarDeAntiguaANueva[0]).release_date.toBe("1986");
+    console.log(ordenarDeAntiguaANueva)
+    expect(typeof ordenarDeAntiguaANueva[0].release_date).toBe(String);
+    expect(ordenarDeAntiguaANueva[0].release_date).toBe("1986");
     expect(typeof ordenarDeAntiguaANueva[1]).release_date.toBe("1988");
     expect(typeof ordenarDeAntiguaANueva[2]).release_date.toBe("1991");
     expect(typeof ordenarDeAntiguaANueva[3]).release_date.toBe("1992");
     
   });
 
+
+});
+
 //   it('returns `anotherExample`', () => {
 //     expect(anotherExample()).toBe('OMG');
 //   });
-});
