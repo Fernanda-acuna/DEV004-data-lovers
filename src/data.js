@@ -46,7 +46,7 @@ function peliculasPorTituloZA(peliculas) {
 
 // Función ordenar por año, ascendente
 
-function peliculasAscendente(peliculas) {
+export function peliculasAscendente(peliculas) {
   return peliculas.sort((a, b) => {
     const fechaA = new Date(a.release_date);
     const fechaB = new Date(b.release_date);
@@ -105,5 +105,4 @@ const botonesPelis = {
 
 
 export default botonesPelis;
-
 
