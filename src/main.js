@@ -3,13 +3,16 @@ import data from "./data/ghibli/ghibli.js";
 
 const peliculas = data.films;
 
+//tratando de obtener la data
+// const fechaLanzamiento = data.films.release_date
+// console.log(fechaLanzamiento)
+
 const contenedorPeliculas = document.querySelector("#contenedor-peliculas");
 
 function renderPeliculas(peliculas) {
-  contenedorPeliculas.innerHTML = peliculas
-    .map((pelicula) => {
-      const { title, poster, director, release_date } = pelicula;
-      return `<section class="grid-item">
+  contenedorPeliculas.innerHTML = peliculas.map((pelicula) => {
+    const { title, poster, director, release_date, } = pelicula;
+    return `<section class="grid-item">
         <p class="titulosPelis">${title}</p>
         <img src="${poster}" class="cortinita"/>
         <div class="overlay">
@@ -19,10 +22,11 @@ function renderPeliculas(peliculas) {
           </div>
         </div>
       </section>`;
-    })
+  })
     .join("");
 }
 
+// console.log(contenedorPeliculas.innerHTML);
 
 renderPeliculas(peliculas);
 
@@ -50,13 +54,16 @@ dropdowns.forEach((dropdown) => {
   const menu = dropdown.querySelector(".menu");
   const options = dropdown.querySelectorAll(".menu li");
   const selected = dropdown.querySelector(".selected");
-
+  // console.log(select);
+  // if (select !== null) {
   //agregar el click event al elemento seleccionado
   select.addEventListener("click", () => {
     select.classList.toggle("select-clicked");
     caret.classList.toggle("caret-rotate");
     menu.classList.toggle("menu-open");
   });
+  //}
+
   //loop a traves de las posiciones
   options.forEach((option) => {
     option.addEventListener("click", () => {
@@ -72,6 +79,7 @@ dropdowns.forEach((dropdown) => {
   });
 });
 
+
 // Botón A-Z
 
 // Obtener el elemento de la lista del botón "A-Z" en el HTML
@@ -84,6 +92,8 @@ botonAZ.addEventListener("click", () => {
   // Renderizar las películas ordenadas por título
   renderPeliculas(peliculasAZ);
 });
+
+
 
 // Botón Z-A
 
@@ -116,7 +126,6 @@ fechaOrdenarD.addEventListener("click", () => {
 });
 
 // Botón directores
-
 // Obtener el elemento del botón desplegable por id
 const directorDropdown = document.querySelector("#directorDropdown");
 
@@ -136,15 +145,17 @@ directorOptions.forEach((option) => {
   });
 });
 
-//Botón productores
+//boton PRODUCTORES
+const producerDropdown = document.querySelector("#productoresDropdown")
+const productorOptions = producerDropdown.querySelectorAll(".menu li");
+productorOptions.forEach((option) => {
+  option.addEventListener("click", () => {
+    const selectedProducer = option.innerText;
+    const peliculasFiltradas = botonesPelis.filtrarProductor(peliculas, selectedProducer)
+    renderPeliculas(peliculasFiltradas);
+  });
+})
 
-//boton productores
-const productores = document.querySelector("#productores");
-//el select funciona al change, no al click
-productores.addEventListener("change", () => {
-  const productor = productores.value;
-  const productorFiltrado = botonesPelis.filtrarProductor(peliculas, productor);
-  renderPeliculas(productorFiltrado);
-});
+
 
 export default renderPeliculas;
