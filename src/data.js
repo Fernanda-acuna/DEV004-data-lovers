@@ -1,20 +1,11 @@
-/*
-export const example = () => {
-  return 'example';
-};
 
-export const anotherExample = () => {
-  return 'OMG';
-};
-*/
+//export const example = () => {
+// return 'example';
+//};
 
-const botonesPelis = {
-  peliculasPorTituloAZ,
-  peliculasPorTituloZA,
-  peliculasAscendente,
-  peliculasDescendente,
-  filtrarDirectores,
-};
+//export const anotherExample = () => {
+//return 'OMG';
+//};
 
 // Función A-Z
 
@@ -55,7 +46,7 @@ function peliculasPorTituloZA(peliculas) {
 
 // Función ordenar por año, ascendente
 
-function peliculasAscendente(peliculas) {
+export function peliculasAscendente(peliculas) {
   return peliculas.sort((a, b) => {
     const fechaA = new Date(a.release_date);
     const fechaB = new Date(b.release_date);
@@ -91,11 +82,27 @@ function peliculasDescendente(peliculas) {
 // Función Directores
 
 // Filtrar las películas por director
-function filtrarDirectores(peliculas, selectedDirector){
+function filtrarDirectores(peliculas, selectedDirector) {
   return peliculas.filter((pelicula) => {
     return pelicula.director === selectedDirector;
   });
 }
+//funcion de filtrar productores
+const filtrarProductor = (peliculas, productor) => {
+  console.log(peliculas, productor);
+  const result = peliculas.filter(pelicula => pelicula.producer === productor);
+  return result
+}
+//se pasa abajo por ser una funcion flecha, asi se llaman las funciones y estas ya se encuentran inicializadas. (investigar hoisting)
+const botonesPelis = {
+  peliculasPorTituloAZ,
+  peliculasPorTituloZA,
+  peliculasAscendente,
+  peliculasDescendente,
+  filtrarDirectores,
+  filtrarProductor,
+};
 
 
 export default botonesPelis;
+
