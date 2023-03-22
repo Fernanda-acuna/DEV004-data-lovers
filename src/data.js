@@ -1,20 +1,5 @@
-/*
-export const example = () => {
-  return 'example';
-};
 
-export const anotherExample = () => {
-  return 'OMG';
-};
-*/
-
-const botonesPelis = {
-  peliculasPorTituloAZ,
-  peliculasPorTituloZA,
-  peliculasAscendente,
-  peliculasDescendente,
-  filtrarDirectores,
-};
+ 
 
 // Función A-Z
 
@@ -87,15 +72,32 @@ function peliculasDescendente(peliculas) {
   });
 }
 
-
 // Función Directores
 
 // Filtrar las películas por director
-function filtrarDirectores(peliculas, selectedDirector){
+function filtrarDirectores(peliculas, selectedDirector) {
   return peliculas.filter((pelicula) => {
     return pelicula.director === selectedDirector;
   });
 }
 
+/// Función Productores
+const filtrarProductores = (peliculas, productor) => {
+  const result = peliculas.filter(
+    (pelicula) => pelicula.producer.includes(productor)
+  );
+  return result;
+};
+
+const botonesPelis = {
+  peliculasPorTituloAZ,
+  peliculasPorTituloZA,
+  peliculasAscendente,
+  peliculasDescendente,
+  filtrarDirectores,
+  filtrarProductores,
+};
 
 export default botonesPelis;
+
+

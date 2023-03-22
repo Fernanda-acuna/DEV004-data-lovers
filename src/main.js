@@ -6,7 +6,8 @@ const peliculas = data.films;
 const contenedorPeliculas = document.querySelector("#contenedor-peliculas");
 
 function renderPeliculas(peliculas) {
-  contenedorPeliculas.innerHTML = peliculas.map((pelicula) => {
+  contenedorPeliculas.innerHTML = peliculas
+    .map((pelicula) => {
       const { title, poster, director, release_date } = pelicula;
       return `<section class="grid-item">
         <p class="titulosPelis">${title}</p>
@@ -22,7 +23,6 @@ function renderPeliculas(peliculas) {
     .join("");
 }
 
-console.log(contenedorPeliculas.innerHTML);
 
 renderPeliculas(peliculas);
 
@@ -72,12 +72,6 @@ dropdowns.forEach((dropdown) => {
   });
 });
 
-
-
-
-
-
-
 // Botón A-Z
 
 // Obtener el elemento de la lista del botón "A-Z" en el HTML
@@ -91,12 +85,6 @@ botonAZ.addEventListener("click", () => {
   renderPeliculas(peliculasAZ);
 });
 
-
-
-
-
-
-
 // Botón Z-A
 
 // Obtener el elemento de la lista del botón "Z-A" en el HTML
@@ -105,17 +93,11 @@ const botonZA = document.querySelector("li:nth-child(4)");
 // Agregar un evento "click" al botón "Z-A"
 botonZA.addEventListener("click", () => {
   // Llamar a la función "peliculasPorTituloZA" para ordenar las películas por orden alfabético inverso (de Z a A)
-const peliculasZA = botonesPelis.peliculasPorTituloZA(peliculas);
+  const peliculasZA = botonesPelis.peliculasPorTituloZA(peliculas);
 
   // Renderizar las películas ordenadas por título
   renderPeliculas(peliculasZA);
 });
-
-
-
-
-
-
 
 // Botón año ascendente
 const fechaOrdenarA = document.querySelector("li:nth-child(1)");
@@ -123,14 +105,7 @@ const fechaOrdenarA = document.querySelector("li:nth-child(1)");
 fechaOrdenarA.addEventListener("click", () => {
   const peliculasAño = botonesPelis.peliculasAscendente(peliculas);
   renderPeliculas(peliculasAño);
-
 });
-
-
-
-
-
-
 
 // Botón año descendente
 const fechaOrdenarD = document.querySelector("li:nth-child(2)");
@@ -138,10 +113,7 @@ const fechaOrdenarD = document.querySelector("li:nth-child(2)");
 fechaOrdenarD.addEventListener("click", () => {
   const peliculasAñoD = botonesPelis.peliculasDescendente(peliculas);
   renderPeliculas(peliculasAñoD);
-
 });
-
-
 
 // Botón directores
 
@@ -154,15 +126,25 @@ directorOptions.forEach((option) => {
   option.addEventListener("click", () => {
     // Obtener el nombre del director seleccionado
     const selectedDirector = option.innerText;
-    const peliculasFiltradas = botonesPelis.filtrarDirectores(peliculas, selectedDirector)
+    const peliculasFiltradas = botonesPelis.filtrarDirectores(
+      peliculas,
+      selectedDirector
+    );
 
     // Renderizar las películas filtradas
     renderPeliculas(peliculasFiltradas);
   });
 });
 
+//Botón productores
 
-
-
+//boton productores
+const productores = document.querySelector("#productores");
+//el select funciona al change, no al click
+productores.addEventListener("change", () => {
+  const productor = productores.value;
+  const productorFiltrado = botonesPelis.filtrarProductor(peliculas, productor);
+  renderPeliculas(productorFiltrado);
+});
 
 export default renderPeliculas;
