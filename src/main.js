@@ -10,9 +10,10 @@ const peliculas = data.films;
 const contenedorPeliculas = document.querySelector("#contenedor-peliculas");
 
 function renderPeliculas(peliculas) {
-  contenedorPeliculas.innerHTML = peliculas.map((pelicula) => {
-    const { title, poster, director, release_date, } = pelicula;
-    return `<section class="grid-item">
+  contenedorPeliculas.innerHTML = peliculas
+    .map((pelicula) => {
+      const { title, poster, director, release_date } = pelicula;
+      return `<section class="grid-item">
         <p class="titulosPelis">${title}</p>
         <img src="${poster}" class="cortinita"/>
         <div class="overlay">
@@ -22,7 +23,7 @@ function renderPeliculas(peliculas) {
           </div>
         </div>
       </section>`;
-  })
+    })
     .join("");
 }
 
@@ -79,7 +80,6 @@ dropdowns.forEach((dropdown) => {
   });
 });
 
-
 // Botón A-Z
 
 // Obtener el elemento de la lista del botón "A-Z" en el HTML
@@ -92,8 +92,6 @@ botonAZ.addEventListener("click", () => {
   // Renderizar las películas ordenadas por título
   renderPeliculas(peliculasAZ);
 });
-
-
 
 // Botón Z-A
 
@@ -146,16 +144,21 @@ directorOptions.forEach((option) => {
 });
 
 //boton PRODUCTORES
-const producerDropdown = document.querySelector("#productoresDropdown")
+const producerDropdown = document.querySelector("#productoresDropdown");
 const productorOptions = producerDropdown.querySelectorAll(".menu li");
 productorOptions.forEach((option) => {
   option.addEventListener("click", () => {
     const selectedProducer = option.innerText;
-    const peliculasFiltradas = botonesPelis.filtrarProductor(peliculas, selectedProducer)
+    const peliculasFiltradas = botonesPelis.filtrarProductor(
+      peliculas,
+      selectedProducer
+    );
     renderPeliculas(peliculasFiltradas);
   });
-})
-
-
+});
+// function toggleDropdown() {
+//   var dropdown = document.getElementById("productoresDropdown");
+//   dropdown.classList.toggle("dropdown3");
+// }
 
 export default renderPeliculas;

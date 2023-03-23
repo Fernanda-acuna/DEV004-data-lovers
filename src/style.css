@@ -30,7 +30,6 @@ body {
   font-size: 130%;
   font-family: "Nunito", sans-serif;
   font-weight: bold;
-
 }
 
 .top-stripe {
@@ -114,7 +113,6 @@ footer {
   position: absolute;
 }
 
-
 /*
 @media (max-width: 575.98px) {
   .grid-item img {
@@ -135,7 +133,6 @@ footer {
   z-index: 99999;
   box-sizing: border-box;
   display: inline-flex;
-
 }
 
 .select {
@@ -150,7 +147,6 @@ footer {
   cursor: pointer;
   transition: 0.3s;
   box-shadow: 8px 8px 4px grey;
-
 }
 
 .select-clicked {
@@ -193,7 +189,6 @@ footer {
   transition: 0.2s;
   z-index: 1;
 }
-
 
 .menu li {
   padding: 0.7em 0.5em;
