@@ -66,8 +66,8 @@ h1 {
   /*cambie a -1 para que quedara al frente el boton pero me oculta la cortinita*/
   z-index: 1;
 }
-
-.grid-item img:hover {
+/* .grid-item img:hover { cambie de lugar el  hover y ya funciona la cortinita*/
+.grid-item:hover img {
   opacity: 0.2;
   pointer-events: auto;
 }
