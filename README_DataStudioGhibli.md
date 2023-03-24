@@ -1,54 +1,86 @@
+<!-- 
+- [*] Documenta brevemente tu trabajo en el archivo README.md de tu repositorio, contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve el problema (o problemas) que tiene tu usuario.
+- [ ] Durante tu trabajo deberás haber hecho e iterado bocetos (sketches) de tu solución usando papel y lápiz. Te recomendamos tomar fotos de todas las iteraciones que hagas, que las subas a tu repositorio y las menciones en tu README.md.
+- [*] Incluye Definición del producto clara e informativa en README.md.
+- [*] Incluye historias de usuario en README.md.
+- [*] Incluye sketch de la solución (prototipo de baja fidelidad) en README.md.
+- [*] Incluye Diseño de la Interfaz de Usuario (prototipo de alta fidelidad) en README.md.
+- [ ] Incluye el listado de problemas que detectaste a través de tests de usabilidad en el README.md.
+-->
 
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
-Poyecto Data Lovers
+**Data Lovers - Studio Ghibli**
 por Debra Figueroa y Fernanda Acuña
 
-Nuestro proyecto busca mostrar de manera clara y ordenada las diferentes producciones creadas por estudio Ghibli, sus años de publicación y sus distintos directores y productores. Para poder organizar la información que necesitan y buscan , dividimos sus requerimientos en 5 historias de usuarios.
+Nuestra página web ofrece información básica y precisa acerca de las producciones de Studio Ghibli; es útil como primera aproximación para personas que no conocen sus películas o que han visto sólo algunas y desean saber qué otras existen, así como datos (año de estreno, director, productor) que son punto de partida para indagaciones más amplias.
+
+## Prototipos
+
+Realizamos dos prototipos que nos sirvieron de guía conforme desarrollábamos la página: uno de baja fidelidad y uno de alta.
+
+- Prototipo de baja fidelidad
+
+![Prototipo de baja fidelidad](prototipo-baja.jpg)
+
+_Este prototipo fue realizado en paint_.
+
+- Prototipo de alta fidelidad
+
+![Prototipo de alta fidelidad](prototipo-alta.jpg)
+
+_Este protipo fue realizado en figma_.
+
+
+Como se aprecia en los prototipos, para organizar la información que los usuarios desean encontrar dividimos sus requerimientos en historias de usuario (HU) o solicitudes breves que se traducen en las siguientes funcionalidades. Algunas de ellas las añadimos conforme fuimos avanzando.
+
+1. Visualizar las películas.
+2. Ordenar las películas de la A a la Z y de la Z a la A.
+3. Ordenar las películas por año de estreno en orden ascendente y descendente.
+4. Filtrar las películas por director.
+5. Filtrar las películas por productor. 
+
+A continuación pueden leerse las HU completas con los criterios de aceptación y las definiciones de terminado que definimos.
 
 ## Historias de usuario:
 
-* HU1.-Definición de la HU1:
+- HU1.- Definición:
+
 _Yo, como aficionado a las producciones de Studio Ghibli, quiero saber cuáles son todas las películas que ha realizado para identificar aquellas que ya vi y las que me falta ver._
 
 <b>Criterios de aceptación:</b>
+
 1. Banner (fondo azul y logo).
 2. Portadas visibles en la misma página, alineadas y separadas con título arriba.
-3. Portadas interactivas. Al pasar el cursor se desliza una cortinita y se muestran el nombre del director y el año de estreno de la película.
+3. Portadas interactivas. Al pasar el cursor se desliza una capa (hover overlay) y se muestran el nombre del director y el año de estreno de la película.
 4. Diseño responsivo.
 
-<b>Definición de terminado (equipo de desarrollo):</b>
+<b>Definición de terminado:</b>
 
-1. Que el diseño sea igual a mi prototipo de alta.
-2. Que nuestros criterios de aceptación pasen los tests.
-3. Dos usuarios nos dieron feedback.
-4. Que esté desplegado en GitHub.
+1. Que el diseño sea similar al prototipo de alta.
+2. Que dos usuarios nos den feedback.
+3. Que esté desplegado en GitHub.
 
-* HU2.-Definición de la HU2:
+- HU2.- Definición:
 
 _Yo, como aficionado a las producciones de Studio Ghibli, quiero saber cuál fue la última película que estrenó para estar al tanto de sus novedades._
 
 <b>Criterios de aceptación:</b>
 
-2. Que al presionar en el botón “ordenar” se muestre el menú desplegable con las opciones ascendente y descendente.
-3. Que al presionar el botón “orden ascendente” se ordenen las películas de la más antigua a la más nueva.
-4. Que al presionar el botón “orden descendente” se ordenen las películas de la más nueva a la más antigua.
-5. Diseño responsivo.
+1. Que al presionar en el botón “ordenar” se muestre el menú desplegable con las opciones ascendente y descendente.
+2. Que al presionar el botón “orden ascendente” se ordenen las películas de la más antigua a la más nueva.
+3. Que al presionar el botón “orden descendente” se ordenen las películas de la más nueva a la más antigua.
+4. Diseño responsivo.
 
 <b>Definición de terminado:</b>
 
-1. Que el diseño sea igual a mi prototipo de alta.
+1. Que el diseño sea similar al prototipo de alta.
 2. Que el botón funcione de manera correcta.
 3. Que el menú se despliegue de manera correcta.
 4. Que las películas se reordenen correctamente, según la instrucción.
-5. Que nuestros criterios de aceptación pasen los tests.
-6. Dos usuarios nos dieron feedback.
+5. Que las funciones pasen los tests.
+6. Que dos usuarios nos den feedback.
 7. Que esté desplegado en GitHub.
 
-* HU3.-Definición de la HU3:
-
-<b>Definición de la HU3:</b>
+- HU3.- Definición:
 
 _Yo, como aficionado a las producciones de Studio Ghibli, quiero ver las películas en orden alfabético (a-z y z-a) para encontrar de manera más rápida la que estoy buscando._
 
@@ -58,49 +90,76 @@ _Yo, como aficionado a las producciones de Studio Ghibli, quiero ver las pelícu
 2. Que al presionar en el botón “ordenar” se muestre el menú desplegable con las opciones “Ascendente”, “Descendente”, “A-Z” y “Z-A”.
 3. Que al presionar el botón “A-Z” se ordenen las películas en orden alfabético.
 4. Que al presionar el botón “Z-A” se ordenen las películas en orden alfabético inverso.
+5. Diseño responsivo.
+
+<p>Definición de terminado:</p>
+
+1. Que el diseño sea similar al prototipo de alta.
+2. Que el botón funcione de manera correcta.
+3. Que el menú se despliegue de manera correcta.
+4. Que las películas se reordenen correctamente, según la instrucción.
+5. Que las funciones pasen los tests.
+6. Que dos usuarios nos den feedback.
+7. Que esté desplegado en GitHub.
+
+- HU4.- Definición:
+
+Yo, como aficionado a las producciones de Miyazaki, quiero saber qué películas de Studio Ghibli dirigió para comprender su visión.
+
+Apariencia:
+Los botones de las historias de usuario se mostrarán sobre las películas en fila. Es este caso, al dar click sobre el botón “Buscar por director” se desplegará un menú que contenga los nombres de los seis directores.
+
+<b>Criterios de aceptación (cosas que va a ver mi usuario):</b>
+
+Botón “Buscar por director”.
+
+Que al presionar en el botón “Buscar por director” se muestre el menú desplegable con los nombres de los seis directores.
+
+Que al presionar el nombre de un director aparezcan sólo las películas que él dirigió.
+
+Diseño responsivo.
+
+<p>Definición de terminado:</p>
+
+1. Que el diseño sea similar al prototipo de alta.
+2. Que el botón funcione de manera correcta.
+3. Que el menú se despliegue de manera correcta.
+4. Que las películas se reordenen correctamente, según la instrucción.
+5. Que las funciones pasen los tests.
+6. Que dos usuarios nos den feedback.
+7. Que esté desplegado en GitHub.
+
+- HU5.- Definición:
+
+Definición de la HU 5:
+
+Yo, como aficionado a las producciones de Studio Ghibli, quiero saber qué productores han participado para conocer al equipo que ha realizado mis películas favoritas.
+
+Apariencia:
+Los botones de las historias de usuario se mostrarán sobre las películas en fila. Es este caso, al dar click sobre el botón “Buscar por productor” se desplegará un menú que contenga los nombres de los productores.
+
+<p>Criterios de aceptación:</p>
+
+1. Botón “Buscar por productor”.
+2. Que al presionar en el botón “Buscar por productor” se muestre el menú desplegable con los nombres de los productores.
+3. Que al presionar el nombre de un productor aparezcan sólo las películas que él dirigió.
 4. Diseño responsivo.
-Definición de terminado (equipo de desarrollo):
-5. Que el diseño sea igual a mi prototipo de alta.
 
-1. Que el botón funcione de manera correcta.
-2. Que el menú se despliegue de manera correcta.
-3. Que las películas se reordenen correctamente, según la instrucción.
-4. Que nuestros criterios de aceptación pasen los tests.
-5. Dos usuarios nos dieron feedback.
-6. Que esté desplegado en GitHub.
+<p>Definición de terminado:</p>
 
-* HU4.-
+1. Que el diseño sea similar al prototipo de alta.
+2. Que el botón funcione de manera correcta.
+3. Que el menú se despliegue de manera correcta.
+4. Que las películas se reordenen correctamente, según la instrucción.
+5. Que las funciones pasen los tests.
+6. Que dos usuarios nos den feedback.
+7. Que esté desplegado en GitHub.
 
-## Prototipos
+## Tests:
 
+Para combrobar que nuestras funciones más relevantes (ordenar y filtrar la data) se comportan según lo previsto, realizamos pruebas unitarias (tests) que evalúan su desempeño y nos permiten garantizar que no haya errores en su funcionamiento. También nos dejan saber qué porcentaje del código ha sido ejecutado por por ellas.
 
-Realizamos 2 prototipos de nuestra web, un prototipo de baja y uno de alta. 
+<!-- PEDIR PANTALLAZO A FER Y COMPLETAR -->
+Según se aprecia, contamos con una cobertura del 80% de statements (sentencias), functions (funciones), lines (líneas), y branches (ramas) del archivo src/data.js.
 
-* Nuestro prototipo de de baja 
-
-![Prototipo de baja](https://i.postimg.cc/8z5QcyXB/prototipo-Baja.jpg)
-
-_Este prototipo fue realizado en paint_.
-
-
-* Nuestro prototipo de alta
-
-![prototipo de alta](https://i.postimg.cc/3J9QKM1x/Protoipo-de-alta.jpg)
-
-_Este protipo fue realizado en figma_.
-
-
-
-
-* [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [ ] Incluye historias de usuario en `README.md`.
-* [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
-  `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
-  en `README.md`.
-* [ ] Incluye el listado de problemas que detectaste a través de tests de
-  usabilidad en el `README.md`.
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [ ] UI: Permite filtrar data en base a una condición.
-* [ ] UI: Es _responsive_.
+<!-- PEDIR PANTALLAZO DE CADA HU EN NAVEGADOR -->
