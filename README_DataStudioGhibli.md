@@ -1,17 +1,7 @@
-<!-- 
-- [*] Documenta brevemente tu trabajo en el archivo README.md de tu repositorio, contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve el problema (o problemas) que tiene tu usuario.
-- [ ] Durante tu trabajo deberás haber hecho e iterado bocetos (sketches) de tu solución usando papel y lápiz. Te recomendamos tomar fotos de todas las iteraciones que hagas, que las subas a tu repositorio y las menciones en tu README.md.
-- [*] Incluye Definición del producto clara e informativa en README.md.
-- [*] Incluye historias de usuario en README.md.
-- [*] Incluye sketch de la solución (prototipo de baja fidelidad) en README.md.
-- [*] Incluye Diseño de la Interfaz de Usuario (prototipo de alta fidelidad) en README.md.
-- [ ] Incluye el listado de problemas que detectaste a través de tests de usabilidad en el README.md.
--->
-
 **Data Lovers - Studio Ghibli**
 <p>por Debra Figueroa y Fernanda Acuña</p>
 
-Nuestra página web ofrece información básica y precisa acerca de las producciones de Studio Ghibli; es útil como primera aproximación para personas que no conocen sus películas o que han visto sólo algunas y desean saber qué otras existen, así como datos (año de estreno, director, productor) que son punto de partida para indagaciones más amplias.
+Nuestra página web ofrece información básica y concisa acerca de las producciones de Studio Ghibli; es útil como primera aproximación para personas que no conocen sus películas o que han visto sólo algunas y desean saber qué otras existen, así como datos (año de estreno, director, productor) que son punto de partida para indagaciones más amplias.
 
 ## Prototipos
 
@@ -21,13 +11,13 @@ Realizamos dos prototipos que nos sirvieron de guía conforme desarrollábamos l
 
 ![Prototipo de baja fidelidad](prototipo-baja.jpg)
 
-_Este prototipo fue realizado en paint_.
+_Este prototipo fue realizado en paint._
 
 - Prototipo de alta fidelidad
 
 ![Prototipo de alta fidelidad](prototipo-alta.jpg)
 
-_Este protipo fue realizado en figma_.
+_Este protipo fue realizado en figma._
 
 
 Como se aprecia en los prototipos, para organizar la información que los usuarios desean encontrar dividimos sus requerimientos en historias de usuario (HU) o solicitudes breves que se traducen en las siguientes funcionalidades. Algunas de ellas las añadimos conforme fuimos avanzando.
@@ -92,7 +82,7 @@ _Yo, como aficionado a las producciones de Studio Ghibli, quiero ver las pelícu
 4. Que al presionar el botón “Z-A” se ordenen las películas en orden alfabético inverso.
 5. Diseño responsivo.
 
-<p>Definición de terminado:</p>
+<b>Definición de terminado:</b>
 
 1. Que el diseño sea similar al prototipo de alta.
 2. Que el botón funcione de manera correcta.
@@ -104,7 +94,7 @@ _Yo, como aficionado a las producciones de Studio Ghibli, quiero ver las pelícu
 
 - HU4.- Definición:
 
-Yo, como aficionado a las producciones de Miyazaki, quiero saber qué películas de Studio Ghibli dirigió para comprender su visión.
+_Yo, como aficionado a las producciones de Miyazaki, quiero saber qué películas de Studio Ghibli dirigió para comprender su visión._
 
 Apariencia:
 Los botones de las historias de usuario se mostrarán sobre las películas en fila. Es este caso, al dar click sobre el botón “Buscar por director” se desplegará un menú que contenga los nombres de los seis directores.
@@ -119,7 +109,7 @@ Que al presionar el nombre de un director aparezcan sólo las películas que él
 
 Diseño responsivo.
 
-<p>Definición de terminado:</p>
+<b>Definición de terminado:</b>
 
 1. Que el diseño sea similar al prototipo de alta.
 2. Que el botón funcione de manera correcta.
@@ -131,21 +121,19 @@ Diseño responsivo.
 
 - HU5.- Definición:
 
-Definición de la HU 5:
-
-Yo, como aficionado a las producciones de Studio Ghibli, quiero saber qué productores han participado para conocer al equipo que ha realizado mis películas favoritas.
+_Yo, como aficionado a las producciones de Studio Ghibli, quiero saber qué productores han participado para conocer al equipo que ha realizado mis películas favoritas._
 
 Apariencia:
 Los botones de las historias de usuario se mostrarán sobre las películas en fila. Es este caso, al dar click sobre el botón “Buscar por productor” se desplegará un menú que contenga los nombres de los productores.
 
-<p>Criterios de aceptación:</p>
+<b>Criterios de aceptación:</b>
 
 1. Botón “Buscar por productor”.
 2. Que al presionar en el botón “Buscar por productor” se muestre el menú desplegable con los nombres de los productores.
 3. Que al presionar el nombre de un productor aparezcan sólo las películas que él dirigió.
 4. Diseño responsivo.
 
-<p>Definición de terminado:</p>
+<b>Definición de terminado:</b>
 
 1. Que el diseño sea similar al prototipo de alta.
 2. Que el botón funcione de manera correcta.
@@ -157,9 +145,9 @@ Los botones de las historias de usuario se mostrarán sobre las películas en fi
 
 ## Tests:
 
-Para combrobar que nuestras funciones más relevantes (ordenar y filtrar la data) se comportan según lo previsto, realizamos pruebas unitarias (tests) que evalúan su desempeño y nos permiten garantizar que no haya errores en su funcionamiento. También nos dejan saber qué porcentaje del código ha sido ejecutado por ellas.
+Para combrobar que las funciones más relevantes (ordenar y filtrar la data) se comportan según lo previsto, realizamos pruebas unitarias (tests) que evalúan su desempeño y nos permiten garantizar que no haya errores en su funcionamiento. También nos dejan saber qué porcentaje del código ha sido ejecutado por ellas.
 
-<!-- PEDIR PANTALLAZO A FER Y COMPLETAR -->
-Según se aprecia, contamos con una cobertura del 80% de statements (sentencias), functions (funciones), lines (líneas), y branches (ramas) del archivo src/data.js.
+![Pruebas unitarias](pruebas-unitarias.png)
 
-<!-- PEDIR PANTALLAZO DE CADA HU EN NAVEGADOR -->
+Como se aprecia en la imagen, las seis funciones pasaron las pruebas. Además logramos una cobertura del 88.88% de sentencias (_statements_), 75% de ramas (_branch_), 100% de funciones (_functions_), y 88.57% de líneas (_lines_) en el archivo src/data.js.
+
