@@ -9,7 +9,7 @@
 -->
 
 **Data Lovers - Studio Ghibli**
-por Debra Figueroa y Fernanda Acuña
+<p>por Debra Figueroa y Fernanda Acuña</p>
 
 Nuestra página web ofrece información básica y precisa acerca de las producciones de Studio Ghibli; es útil como primera aproximación para personas que no conocen sus películas o que han visto sólo algunas y desean saber qué otras existen, así como datos (año de estreno, director, productor) que son punto de partida para indagaciones más amplias.
 
@@ -38,7 +38,7 @@ Como se aprecia en los prototipos, para organizar la información que los usuari
 4. Filtrar las películas por director.
 5. Filtrar las películas por productor. 
 
-A continuación pueden leerse las HU completas con los criterios de aceptación y las definiciones de terminado que definimos.
+A continuación pueden leerse las HU completas con sus criterios de aceptación y definiciones de terminado.
 
 ## Historias de usuario:
 
@@ -157,7 +157,7 @@ Los botones de las historias de usuario se mostrarán sobre las películas en fi
 
 ## Tests:
 
-Para combrobar que nuestras funciones más relevantes (ordenar y filtrar la data) se comportan según lo previsto, realizamos pruebas unitarias (tests) que evalúan su desempeño y nos permiten garantizar que no haya errores en su funcionamiento. También nos dejan saber qué porcentaje del código ha sido ejecutado por por ellas.
+Para combrobar que nuestras funciones más relevantes (ordenar y filtrar la data) se comportan según lo previsto, realizamos pruebas unitarias (tests) que evalúan su desempeño y nos permiten garantizar que no haya errores en su funcionamiento. También nos dejan saber qué porcentaje del código ha sido ejecutado por ellas.
 
 <!-- PEDIR PANTALLAZO A FER Y COMPLETAR -->
 Según se aprecia, contamos con una cobertura del 80% de statements (sentencias), functions (funciones), lines (líneas), y branches (ramas) del archivo src/data.js.
