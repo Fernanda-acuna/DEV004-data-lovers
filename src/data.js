@@ -1,12 +1,3 @@
-
-//export const example = () => {
-// return 'example';
-//};
-
-//export const anotherExample = () => {
-//return 'OMG';
-//};
-
 // Función A-Z
 
 // Define la función "peliculasPorTituloAZ" que recibe el arreglo de objetos "peliculas" como parámetro.
@@ -79,20 +70,24 @@ export function peliculasDescendente(peliculas) {
 }
 
 
+
 // Función Directores
 
 // Filtrar las películas por director
 export function filtrarDirectores(peliculas, selectedDirector) {
+
   return peliculas.filter((pelicula) => {
     return pelicula.director === selectedDirector;
   });
 }
+
 //funcion de filtrar productores
 export const filtrarProductor = (peliculas, productor) => {
   console.log(peliculas, productor);
   const result = peliculas.filter(pelicula => pelicula.producer === productor);
   return result
 }
+
 //se pasa abajo por ser una funcion flecha, asi se llaman las funciones y estas ya se encuentran inicializadas. (investigar hoisting)
 const botonesPelis = {
   peliculasPorTituloAZ,
@@ -103,6 +98,4 @@ const botonesPelis = {
   filtrarProductor,
 };
 
-
 export default botonesPelis;
-
