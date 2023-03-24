@@ -65,31 +65,33 @@ h1 {
   /*cambie a -1 para que quedara al frente el boton pero me oculta la cortinita*/
   z-index: 1;
 }
-
-.img-overlay {
+/* .grid-item img:hover { cambie de lugar el  hover y ya funciona la cortinita*/
+.grid-item:hover img {
   opacity: 0.2;
   pointer-events: auto;
 }
+
 
 footer {
   text-align: center;
   color: #2395d3;
 }
-
+/* clase de el <p> que contiene los directores para mostrar */
 .directores {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
 
+}
+/* classe del <p> que contiene los años para mostrar en  la cortinita */
 .anio {
   position: absolute;
   top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+/* overlay es la clase que contiene al div directorPeli */
 .overlay .directorPeli {
   position: absolute;
   top: 0;
@@ -101,9 +103,9 @@ footer {
   transition: visibility 0s, opacity 0.5s linear;
 }
 
-.grid-item:hover .overlay {
-  background-color: #2395d3;
-}
+/* .grid-item:hover .overlay {
+  background-color: red;
+} */
 
 .grid-item:hover .overlay .directorPeli {
   visibility: visible;
@@ -133,6 +135,9 @@ footer {
   z-index: 99999;
   box-sizing: border-box;
   display: inline-flex;
+  justify-content: center;
+
+
 }
 
 .select {
@@ -157,7 +162,7 @@ footer {
 .select:hover {
   background: #56afde;
 }
-
+/* flechita */
 .caret {
   width: 0;
   height: 0;
@@ -166,7 +171,7 @@ footer {
   border-top: 6px solid #fff;
   transition: 0.3s;
 }
-
+/* flechita que gira */
 .caret-rotate {
   transform: rotate(180deg);
 }

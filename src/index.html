@@ -1,21 +1,90 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1" />
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <div class="header">
-      <div>
-        <img
-          src="https://upload.wikimedia.org/wikipedia/sco/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png"
-          class="ghibliLogo"
-        />
-      </div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1" />
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="header">
+    <div>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/sco/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png"
+        class="ghibliLogo" />
     </div>
+  </div>
+
+  <!-- //boton para ir al inicio (es como un F5)-->
+  <section class="dropdown">
+<div class="select" value="Home" onclick="location.reload()">Home</div>
+</section>
+
+  <!-- Ordenar -->
+  <section class="dropdown">
+    <div class="select">
+      <span class="selected">Ordenar&nbsp;</span>
+      <div class="caret"></div>
+    </div>
+    <ul class="menu">
+      <li>Ascendente</li>
+      <li>Descendente</li>
+      <li id="ordenarAZ">A-Z</li>
+      <li id="ordenarZA">Z-A</li>
+    </ul>
+  </section>
+
+  <!-- Filtrar por Director -->
+  <section class="dropdown" id="directorDropdown">
+    <div class="select">
+      <span class="selected">Buscar por director&nbsp;</span>
+      <div class="caret"></div>
+    </div>
+    <ul class="menu">
+      <li>Hayao Miyazaki</li>
+      <li>Isao Takahata</li>
+      <li>Yoshifumi Kondō</li>
+      <li>Hiroyuki Morita</li>
+      <li>Gorō Miyazaki</li>
+      <li>Hiromasa Yonebayashi</li>
+    </ul>
+  </section>
+ <!-- ordenar por productores -->
+  <section class="dropdown" id="productoresDropdown">
+    <div class="select">
+      <span class="selected">Buscar por productor&nbsp;</span>
+      <div class="caret"></div>
+    </div>
+    <ul class="menu">
+      <li>Isao Takahata</li>
+      <li>Hayao Miyazaki</li>
+      <li>Toru Hara</li>
+      <li>Toshio Suzuki</li>
+      <li>Yoshiaki Nishimura</li>
+    </ul>
+  </section>
+
+
+
+  <!-- <h1>Producciones</h1> -->
+
+  <!-- el boton de ordenar -->
+  <section id="drop" class="flex-boton"></section>
+
+  <section id="contenedor-peliculas" class="flex-title"></section>
+
+  <script src="main.js" type="module"></script>
+
+  <br /><br /><br />
+
+  <footer>Creado por Debra🇲🇽 y Fernanda🇨🇱</footer>
+
+  <br /><br />
+</body>
+
 
     <!-- //boton para ir al inicio (es como un F5)-->
     <section class="dropdown">

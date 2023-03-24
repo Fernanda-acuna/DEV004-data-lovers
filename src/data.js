@@ -1,7 +1,7 @@
 // Función A-Z
 
 // Define la función "peliculasPorTituloAZ" que recibe el arreglo de objetos "peliculas" como parámetro.
-function peliculasPorTituloAZ(peliculas) {
+export function peliculasPorTituloAZ(peliculas) {
   // Utiliza el método "sort" del objeto "peliculas" para ordenar los elementos del arreglo según una función de comparación.
   return peliculas.sort((a, b) => {
     // Compara las propiedades "title" de los objetos "a" y "b" para determinar si "a.title" es menor que "b.title".
@@ -22,7 +22,7 @@ function peliculasPorTituloAZ(peliculas) {
 // Función Z-A
 
 // Definir la función "peliculasPorTituloZA" para ordenar las películas por orden alfabético inverso (de Z a A)
-function peliculasPorTituloZA(peliculas) {
+export function peliculasPorTituloZA(peliculas) {
   // Usar el método "sort" para ordenar las películas por título
   return peliculas.sort((a, b) => {
     if (a.title < b.title) {
@@ -36,7 +36,7 @@ function peliculasPorTituloZA(peliculas) {
 }
 
 // Función ordenar por año, ascendente
-
+//CON ESTE EXPORT PUEDO LLAMAR A MI FUNCION DE MANERA INDIVIDUAL
 export function peliculasAscendente(peliculas) {
   return peliculas.sort((a, b) => {
     const fechaA = new Date(a.release_date);
@@ -54,7 +54,7 @@ export function peliculasAscendente(peliculas) {
 
 // Función ordenar por año, descendente
 
-function peliculasDescendente(peliculas) {
+export function peliculasDescendente(peliculas) {
   return peliculas.sort((a, b) => {
     const fechaA = new Date(a.release_date);
     const fechaB = new Date(b.release_date);
@@ -69,20 +69,24 @@ function peliculasDescendente(peliculas) {
   });
 }
 
-// Función filtrar películas por director
-function filtrarDirectores(peliculas, selectedDirector) {
+
+
+// Función Directores
+
+// Filtrar las películas por director
+export function filtrarDirectores(peliculas, selectedDirector) {
+
   return peliculas.filter((pelicula) => {
     return pelicula.director === selectedDirector;
   });
 }
 
-// Función filtrar películas por productor
-const filtrarProductor = (peliculas, productor) => {
-  const result = peliculas.filter(
-    (pelicula) => pelicula.producer === productor
-  );
-  return result;
-};
+//funcion de filtrar productores
+export const filtrarProductor = (peliculas, productor) => {
+  console.log(peliculas, productor);
+  const result = peliculas.filter(pelicula => pelicula.producer === productor);
+  return result
+}
 
 //se pasa abajo por ser una funcion flecha, asi se llaman las funciones y estas ya se encuentran inicializadas. (investigar hoisting)
 const botonesPelis = {
