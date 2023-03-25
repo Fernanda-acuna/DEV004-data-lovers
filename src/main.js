@@ -27,8 +27,6 @@ function renderPeliculas(peliculas) {
     .join("");
 }
 
-// console.log(contenedorPeliculas.innerHTML);
-
 renderPeliculas(peliculas);
 
 const gridItems = document.querySelectorAll(".grid-item");
