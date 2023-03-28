@@ -92,6 +92,7 @@ describe("filtrarDirectores", () => {
   });
 });
 // Test filtrar por productor
+// Test filtrar por productor
 describe("filtrarProductor", () => {
   it("debe devolver las películas del productor seleccionado", () => {
     const peliculas = [
