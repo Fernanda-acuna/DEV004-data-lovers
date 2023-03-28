@@ -1,6 +1,4 @@
 
-// import functions from '../src/data.js';
-
 // Test ordenar por título A-Z
 
 describe("peliculasPorTituloAZ", () => {
@@ -110,8 +108,6 @@ describe('Ordenar pelîculas de manera Descendente', () => {
 
 });
 // Test ordenar por título A-Z
-
-// describe('Ordenar pelîculas de manera Ascendente', () => {
 describe("peliculasPorTituloAZ", () => {
   it("debe ordenar las películas de A a Z", () => {
     const peliculas = [
@@ -120,21 +116,16 @@ describe("peliculasPorTituloAZ", () => {
       { title: "Kiki's Delivery Service" },
       { title: "Grave of the Fireflies" },
     ];
-    const peliculasOrdenadas = peliculasPorTituloAZ(peliculas);
-
-    //PROPUESTA DE FER
-    expect(peliculasOrdenadas).toEqual([{ title: "Castle in the Sky" }, { title: "Grave of the Fireflies" }, { title: "Kiki's Delivery Service" }, { title: "My Neighbor Totoro" }]);
-
-    //CODIGO DE DEBRA
-    //   expect(peliculasOrdenadas[0].title).toBe("Castle in the Sky");
-    //   expect(peliculasOrdenadas[1].title).toBe("Grave of the Fireflies");
-    //   expect(peliculasOrdenadas[2].title).toBe("Kiki's Delivery Service");
-    //   expect(peliculasOrdenadas[3].title).toBe("My Neighbor Totoro");
+    const ordenarAZ = peliculasPorTituloAZ(peliculas);
+    expect(ordenarAZ).toEqual([
+      { title: "Castle in the Sky" },
+      { title: "Grave of the Fireflies" },
+      { title: "Kiki's Delivery Service" },
+      { title: "My Neighbor Totoro" },
+    ]);
   });
 });
-// })
 // Test ordenar por título Z-A
-
 describe("peliculasPorTituloZA", () => {
   it("debe ordenar las películas de Z a A", () => {
     const peliculas = [
@@ -143,20 +134,52 @@ describe("peliculasPorTituloZA", () => {
       { title: "Kiki's Delivery Service" },
       { title: "Grave of the Fireflies" },
     ];
-    const peliculasOrdenadas = peliculasPorTituloZA(peliculas);
-    expect(peliculasOrdenadas[0].title).toBe("My Neighbor Totoro");
-    expect(peliculasOrdenadas[1].title).toBe("Kiki's Delivery Service");
-    expect(peliculasOrdenadas[2].title).toBe("Grave of the Fireflies");
-    expect(peliculasOrdenadas[3].title).toBe("Castle in the Sky");
+    const ordenarZA = peliculasPorTituloZA(peliculas);
+    expect(ordenarZA).toEqual([
+      { title: "My Neighbor Totoro" },
+      { title: "Kiki's Delivery Service" },
+      { title: "Grave of the Fireflies" },
+      { title: "Castle in the Sky" },
+    ]);
   });
 });
-
-
-//});
-
-
-
-// Test filtrar por nombre de director
+// Test ordenar por año, descendente
+describe("Ordenar pelîculas de manera Ascendente", () => {
+  const datos = [
+    { release_date: "1992" },
+    { release_date: "1991" },
+    { release_date: "1986" },
+    { release_date: "1988" },
+  ];
+  const ordenarDeAntiguaANueva = peliculasAscendente(datos);
+  it("los años desde la mas antigua a la mas nueva", () => {
+    expect(ordenarDeAntiguaANueva).toEqual([
+      { release_date: "1986" },
+      { release_date: "1988" },
+      { release_date: "1991" },
+      { release_date: "1992" },
+    ]);
+  });
+});
+// Test ordenar por año, descendente
+describe("Ordenar pelîculas de manera Descendente", () => {
+  const datos = [
+    { release_date: "1992" },
+    { release_date: "1991" },
+    { release_date: "1986" },
+    { release_date: "1988" },
+  ];
+  const ordenarDeNuevaAAntigua = peliculasDescendente(datos);
+  it("los años desde el mas nuevo al mas antiguo", () => {
+    expect(ordenarDeNuevaAAntigua).toEqual([
+      { release_date: "1992" },
+      { release_date: "1991" },
+      { release_date: "1988" },
+      { release_date: "1986" },
+    ]);
+  });
+});
+// Test filtrar por director
 describe("filtrarDirectores", () => {
   it("debe devolver las películas del director seleccionado", () => {
     const peliculas = [
@@ -177,8 +200,7 @@ describe("filtrarDirectores", () => {
     ]);
   });
 });
-
-// Test filtrar por nombre de PRODUCTOR
+// Test filtrar por productor
 describe("filtrarProductor", () => {
   it("debe devolver las películas del productor seleccionado", () => {
     const peliculas = [
@@ -196,18 +218,14 @@ describe("filtrarProductor", () => {
       { title: "Pom Poko", producer: "Toshio Suzuki" },
       { title: "Only Yesterday", producer: "Toshio Suzuki" },
       { title: "Porco Rosso", producer: "Toshio Suzuki" },
-      
-
     ]);
   });
 });
-
 import {
   peliculasPorTituloAZ,
   peliculasPorTituloZA,
   peliculasAscendente,
   peliculasDescendente,
   filtrarDirectores,
-  filtrarProductor, 
+  filtrarProductor,
 } from "../src/data.js";
-
